@@ -62,10 +62,10 @@
 
 				var geometry = new THREE.BoxBufferGeometry( 20, 20, 20 );
 
-				var instatex = new THREE.TextureLoader().load( 'LinkedIn.png' );
-				var instamat = new THREE.MeshLambertMaterial( { map: instatex, emissiveMap: instatex , emissive: 0x999999} );
+				var LinkedIn = new THREE.TextureLoader().load( 'LinkedIn.png' );
+				var LinkedInMat = new THREE.MeshLambertMaterial( { map: LinkedIn, emissiveMap: LinkedIn , emissive: 0x999999} );
 
-				var mesh = new THREE.Mesh( geometry, instamat );
+				var mesh = new THREE.Mesh( geometry, LinkedInMat );
 				mesh.position.x = 20;
 				mesh.position.z = 10;
 				mesh.rotation.x = Math.random() * 2 * Math.PI;
@@ -75,11 +75,11 @@
 				scene.add( mesh );
 
 
-				var kofitex = new THREE.TextureLoader().load( 'Github.png' );
-				var kofimat = new THREE.MeshLambertMaterial( { map: kofitex, emissiveMap: kofitex , emissive: 0x999999} );
+				var github = new THREE.TextureLoader().load( 'Github.png' );
+				var githubmat = new THREE.MeshLambertMaterial( { map: github, emissiveMap: github, emissive: 0x999999} );
 
 
-				var mesh = new THREE.Mesh( geometry, kofimat );
+				var mesh = new THREE.Mesh( geometry, githubmat );
 				mesh.position.x = -20;
 				mesh.position.z = 10;
 				mesh.rotation.x = Math.random() * 2 * Math.PI;
