@@ -88,6 +88,18 @@
 				mesh.name = 'Github';
 				scene.add( mesh );
 
+				var web = new THREE.TextureLoader().load( 'web.png' );
+				var webmat = new THREE.MeshLambertMaterial( { map: web, emissiveMap: web, emissive: 0x999999} );
+
+
+				var mesh = new THREE.Mesh( geometry, webmat );
+				mesh.position.x = -20;
+				mesh.position.z = 10;
+				mesh.rotation.x = Math.random() * 2 * Math.PI;
+				// mesh.rotation.y = Math.random() * 2 * Math.PI;
+				mesh.rotation.z = Math.random() * 2 * Math.PI;
+				mesh.name = 'web';
+				scene.add( mesh );
 
 				
 
@@ -201,6 +213,9 @@
 					else if (INTERSECTED == scene.getObjectByName( "Github" )) {
 						linkActive = 2;
 					}
+					else if (INTERSECTED == scene.getObjectByName( "web" )) {
+						linkActive = 3;
+					}
 					
 					else {
 						linkActive = 0;
@@ -225,6 +240,9 @@
 						break;
 					case 2:
 						window.open("https://github.com/JC-78");
+						break;
+					case 3:
+						window.open("https://jc-78.github.io/web/");
 						break;
 					
 				}
