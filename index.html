@@ -120,7 +120,7 @@
 
 				var mesh = new THREE.Mesh( geometry, webmat );
 				mesh.position.x = 40;
-				mesh.position.z = 15;
+				mesh.position.z = 40;
 				mesh.rotation.x = Math.random() * 2 * Math.PI;
 				// mesh.rotation.y = Math.random() * 2 * Math.PI;
 				mesh.rotation.z = Math.random() * 2 * Math.PI;
@@ -242,6 +242,12 @@
 					else if (INTERSECTED == scene.getObjectByName( "web" )) {
 						linkActive = 3;
 					}
+					else if (INTERSECTED == scene.getObjectByName( "web1" )) {
+						linkActive = 4;
+					}
+					else if (INTERSECTED == scene.getObjectByName( "web2" )) {
+						linkActive = 5;
+					}
 					
 					else {
 						linkActive = 0;
@@ -268,6 +274,12 @@
 						window.open("https://github.com/JC-78");
 						break;
 					case 3:
+						window.open("https://jc-78.github.io/web/");
+						break;
+					case 4:
+						window.open("https://jc-78.github.io/web/");
+						break;
+					case 5:
 						window.open("https://jc-78.github.io/web/");
 						break;
 					
